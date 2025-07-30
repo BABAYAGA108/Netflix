@@ -597,8 +597,34 @@ const Hero = () => {
         </div>
       </div>
       {/*footer */}
-      <div className="relative z-10 w-full text-white text-center py-8 px-4 bg-black/80">
-        <p className="text-sm mb-2">Questions? Call 1-800-123-4567</p>
+
+      <div className="relative z-10 w-full text-white text-start py-8 px-4 bg-black/80 flex flex-col">
+        <p className="text-sm mb-2 underline">Questions? contact us </p>
+
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 text-1xl underline">
+          <p>FAQ</p>
+          <p>Investor question</p>
+          <p>Privacy</p>
+          <p>speed test</p>
+        </ul>
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 text-1xl">
+          <p>Help center</p>
+          <p>Jobs</p>
+          <p>cookies preference</p>
+          <p>Legal Notices</p>
+        </ul>
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 text-1xl">
+          <p>Account</p>
+          <p>Ways to watch</p>
+          <p>coportae information</p>
+          <p>Only on netflix</p>
+        </ul>
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 text-1xl">
+          <p>Media center</p>
+          <p>terms of use</p>
+          <p>Contact us</p>
+        </ul>
+
         <p className="text-xs mb-2">
           © 2025 Netflix, Inc. All rights reserved.
         </p>
