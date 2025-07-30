@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Componets/Navbar/Navbar";
 import SignIn from "./Componets/SignIn page/SignIn"
 import Hero from "./Componets/HeroSection/Hero";
+import Footer from "./Componets/Footer/Footer";
+import FQA from "./Componets/HeroSection/FQA";
 
 function App() {
   return (
@@ -9,6 +11,10 @@ function App() {
     
       <Navbar /> 
       <Hero/>
+      <FQA />
+      <Footer />
+      
+      {/* Define your routes here */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
