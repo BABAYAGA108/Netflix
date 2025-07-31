@@ -1,7 +1,13 @@
 import { useState } from "react";
+import type { FormEvent } from "react"; // Type-only import
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../../firebaseconfig";
+import {
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import type { AuthError } from "firebase/auth"; // Type-only import
+import { auth } from "../../firebaseconfig"; // Adjust path as needed
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +15,7 @@ const SignIn = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const googleProvider = new GoogleAuthProvider(); // Initialize here if not in config
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,9 +26,10 @@ const SignIn = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/browse");
     } catch (err) {
-      // 2. Proper error typing
-      if (err instanceof Error) {
-        setError(getErrorMessage((err as AuthError).code)); // Cast to Firebase AuthError
+      if (isFirebaseError(err)) {
+        setError(getErrorMessage(err.code));
+      } else if (err instanceof Error) {
+        setError(err.message);
       } else {
         setError("An unknown error occurred");
       }
@@ -35,16 +43,23 @@ const SignIn = () => {
       await signInWithPopup(auth, googleProvider);
       navigate("/browse");
     } catch (err) {
-      if (err instanceof Error) {
-        setError(getErrorMessage(err.message)); // or err.code for Firebase errors
+      if (isFirebaseError(err)) {
+        setError(getErrorMessage(err.code));
+      } else if (err instanceof Error) {
+        setError(err.message);
       } else {
         setError("An unknown error occurred");
       }
     }
   };
 
-  // Helper function for user-friendly error messages
-  const getErrorMessage = (code) => {
+  // Type guard for Firebase errors
+  const isFirebaseError = (error: unknown): error is AuthError => {
+    return (error as AuthError).code !== undefined;
+  };
+
+  // Helper function with proper typing
+  const getErrorMessage = (code: string): string => {
     switch (code) {
       case "auth/invalid-email":
         return "Invalid email format";
