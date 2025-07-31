@@ -8,20 +8,17 @@ import FQA from "./Componets/HeroSection/FQA";
 function App() {
   return (
     <Router>
-    
-      <Navbar /> 
-      <Hero/>
+      <Navbar />
+      <Hero />
       <FQA />
       <Footer />
-      
+
       {/* Define your routes here */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/hero" element={<Hero />} />
-        
       </Routes>
-      
     </Router>
   );
 }

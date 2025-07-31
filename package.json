@@ -10,13 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-firebase/auth": "^0.2.10",
     "@tailwindcss/vite": "^4.1.11",
+    "@types/next-auth": "^3.13.0",
+    "@types/react-toastify": "^4.0.2",
+    "firebase": "^12.0.0",
     "framer-motion": "^12.23.6",
+    "next-auth": "^4.24.11",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.7.0",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

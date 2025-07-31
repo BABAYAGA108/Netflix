@@ -486,7 +486,7 @@ const Hero = () => {
             <div className="relative z-10">
               <h3 className="text-xl font-semibold mb-3">
                 Create profiles for kids
-              </h3>
+              </h3> 
               <p className="text-gray-300">
                 Send kids on adventures with their favorite characters in a
                 space made just for them.
