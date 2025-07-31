@@ -19,7 +19,12 @@ const SignIn = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/browse");
     } catch (err) {
-      setError(getErrorMessage(err.code));
+      // 2. Proper error typing
+      if (err instanceof Error) {
+        setError(getErrorMessage((err as AuthError).code)); // Cast to Firebase AuthError
+      } else {
+        setError("An unknown error occurred");
+      }
     } finally {
       setLoading(false);
     }
