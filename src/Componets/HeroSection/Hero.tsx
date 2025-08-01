@@ -226,7 +226,7 @@ const Hero = () => {
 
       {/* Movie Carousel */}
       <div className="relative z-10 w-full max-w-6xl px-4 mb-20">
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden md:flex items-center">
           {/* Carousel Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -250,7 +250,7 @@ const Hero = () => {
 
           {/* Movie Grid */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4"
+            className="flex overflow-x-auto scrollbar-hide gap-4 pb-4"
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -358,7 +358,7 @@ const Hero = () => {
               </div>
 
               <div className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4 ">
                   <h2 className="text-white text-2xl md:text-3xl font-bold">
                     {selectedMovie.title}
                   </h2>
@@ -370,7 +370,13 @@ const Hero = () => {
                     {selectedMovie.seasons !== undefined && (
                       <span className="text-gray-400">
                         {selectedMovie.seasons}{" "}
-                        {selectedMovie.seasons === 1 ? "Season" : "Seasons"}
+                        {selectedMovie.seasons === 1 ? "Season" : "Season"}
+                      </span>
+                    )}
+                    <span className="text-gray-400"></span>
+                    {selectedMovie.genre !== undefined && (
+                      <span className="text-gray-400">
+                        {selectedMovie.genre}
                       </span>
                     )}
                   </div>
@@ -424,7 +430,6 @@ const Hero = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
 
       {/* Curved Bottom */}
       <svg
