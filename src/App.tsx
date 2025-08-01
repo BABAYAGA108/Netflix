@@ -4,12 +4,14 @@ import SignIn from "./Componets/SignIn page/SignIn"
 import Hero from "./Componets/HeroSection/Hero";
 import Footer from "./Componets/Footer/Footer";
 import FQA from "./Componets/HeroSection/FQA";
+import Reasons from "./Componets/HeroSection/reasons";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Hero />
+      <Reasons />
       <FQA />
       <Footer />
 

@@ -20,9 +20,6 @@ import tokillamonkey1 from "../../assets/Movies/to kill a monkey.jpg";
 import tokillamonkey2 from "../../assets/Movies/to kill a monkey 2.jpg";
 import strawimage from "../../assets/Movies/Straw-2025-Netflix.jpg";
 import fallbackImage from "../../assets/Movies/Straw-2025-Netflix.jpg"; 
-import { MdTv } from "react-icons/md";
-import { FaDownload, FaChild } from "react-icons/fa";
-import { TbDeviceDesktop } from "react-icons/tb";
 
 interface Movie {
   id: number;
@@ -427,79 +424,6 @@ const Hero = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Reasons Section */}
-      <div className="relative z-10 w-full text-white text-start py-8 px-4">
-        <h2 className="text-2xl mb-6 px-4">More reasons to join</h2>
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
-          {/* Watch Anywhere Card */}
-          <div className="h-64 p-6 rounded-lg bg-gradient-to-br from-[#1D172D] via-[#2A1B3D] to-black relative overflow-hidden group">
-            <div className="relative z-10">
-              <h3 className="text-xl font-semibold mb-3">Watch anywhere</h3>
-              <p className="text-gray-300">
-                Enjoy on your TV, Playstation, Xbox, Chromecast, Apple TV,
-                Blu-ray players, and more.
-              </p>
-            </div>
-            <MdTv
-              className="absolute bottom-4 right-4 w-12 h-12 text-purple-400 opacity-80 group-hover:scale-110 transition-transform duration-300"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-0" />
-          </div>
-
-          {/* Download Shows Card */}
-          <div className="h-64 p-6 rounded-lg bg-gradient-to-br from-[#1D172D] via-[#2A1B3D] to-black relative overflow-hidden group">
-            <div className="relative z-10">
-              <h3 className="text-xl font-semibold mb-3">
-                Download to watch offline
-              </h3>
-              <p className="text-gray-300">
-                Save your favorites easily and always have something to watch.
-              </p>
-            </div>
-            <FaDownload
-              className="absolute bottom-4 right-4 w-12 h-12 text-purple-400 opacity-80 group-hover:scale-110 transition-transform duration-300"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-0" />
-          </div>
-
-          {/* Watch Everywhere Card */}
-          <div className="h-64 p-6 rounded-lg bg-gradient-to-br from-[#1D172D] via-[#2A1B3D] to-black relative overflow-hidden group">
-            <div className="relative z-10">
-              <h3 className="text-xl font-semibold mb-3">Watch everywhere</h3>
-              <p className="text-gray-300">
-                Stream unlimited movies and TV shows on your phone, tablet,
-                laptop, and TV.
-              </p>
-            </div>
-            <TbDeviceDesktop
-              className="absolute bottom-4 right-4 w-12 h-12 text-purple-400 opacity-80 group-hover:scale-110 transition-transform duration-300"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-0" />
-          </div>
-
-          {/* Kids Profiles Card */}
-          <div className="h-64 p-6 rounded-lg bg-gradient-to-br from-[#1D172D] via-[#2A1B3D] to-black relative overflow-hidden group">
-            <div className="relative z-10">
-              <h3 className="text-xl font-semibold mb-3">
-                Create profiles for kids
-              </h3> 
-              <p className="text-gray-300">
-                Send kids on adventures with their favorite characters in a
-                space made just for them.
-              </p>
-            </div>
-            <FaChild
-              className="absolute bottom-4 right-4 w-12 h-12 text-purple-400 opacity-80 group-hover:scale-110 transition-transform duration-300"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-0" />
-          </div>
-        </div>
-      </div>
 
 
       {/* Curved Bottom */}

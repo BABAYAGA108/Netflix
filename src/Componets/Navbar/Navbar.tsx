@@ -173,30 +173,42 @@ const Navbar = () => {
       </AnimatePresence>
 
       {/* Hero Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-0 text-white text-center px-4">
-        <h1 className="text-6xl font-extrabold mb-4 justify-middle">
-          Unlimited movies,<br />
-           TV shows, and <br/> more
-        </h1>
-        <p className="text-2xl mb-6">Starts at ₦2,500. Cancel anytime.</p>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Ready to watch? Enter your email to create or restart your membership.
-        </p>
+      {/* Hero Section */}
+      <div className="relative min-h-screen bg-[url('https://example.com/netflix-bg.jpg')] bg-cover bg-center">
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50 z-0"></div>
 
-        <form className="flex flex-col sm:flex-row justify-center max-w-2xl mx-auto gap-4">
-          <input
-            type="email"
-            placeholder="Email address"
-            className="flex-grow p-4 bg-black/30 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded font-medium text-xl transition-colors duration-200 whitespace-nowrap"
-          >
-            Get Started &gt;
-          </button>
-        </form>
+        {/* Hero Content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white text-center px-4 w-full max-w-6xl mx-auto h-auto py-16 md:py-24">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 md:mb-6">
+            Unlimited movies,
+            <br />
+            TV shows, and <br />
+            more
+          </h1>
+          <p className="text-xl md:text-2xl mb-6 md:mb-8">
+            Starts at ₦2,500. Cancel anytime.
+          </p>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+
+          <form className="flex flex-col sm:flex-row justify-center w-full max-w-2xl mx-auto gap-4 px-4">
+            <input
+              type="email"
+              placeholder="Email address"
+              className="flex-grow p-3 md:p-4 bg-black/70 text-white rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 md:py-4 rounded font-medium text-lg md:text-xl transition-colors duration-200 whitespace-nowrap"
+            >
+              Get Started &gt;
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
