@@ -53,12 +53,11 @@ const SignIn = () => {
     }
   };
 
-  // Type guard for Firebase errors
+
   const isFirebaseError = (error: unknown): error is AuthError => {
     return (error as AuthError).code !== undefined;
   };
 
-  // Helper function with proper typing
   const getErrorMessage = (code: string): string => {
     switch (code) {
       case "auth/invalid-email":
