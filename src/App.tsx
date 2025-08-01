@@ -15,7 +15,7 @@ function App() {
       <FQA />
       <Footer />
 
-      {/* Define your routes here */}
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
