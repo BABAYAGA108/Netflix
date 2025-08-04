@@ -250,7 +250,7 @@ const Hero = () => {
 
           {/* Movie Grid */}
           <motion.div
-            className="flex overflow-x-auto scrollbar-hide gap-4 pb-4"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4"
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -377,8 +377,10 @@ const Hero = () => {
                     {selectedMovie.genre !== undefined && (
                       <span className="text-gray-400">
                         {selectedMovie.genre}
+                        
                       </span>
                     )}
+                    
                   </div>
                 </div>
 
@@ -446,4 +448,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero; 
