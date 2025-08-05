@@ -5,20 +5,22 @@ import Hero from "./Componets/HeroSection/Hero";
 import Footer from "./Componets/Footer/Footer";
 import FQA from "./Componets/HeroSection/FQA";
 import Reasons from "./Componets/HeroSection/reasons";
+import SignUp from "./Componets/SignIn page/SignUp";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/hero" element={<Hero />} />
+      </Routes>
       <Hero />
       <Reasons />
       <FQA />
       <Footer />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/hero" element={<Hero />} />
-      </Routes>
     </Router>
   );
 }

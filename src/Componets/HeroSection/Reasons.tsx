@@ -1,8 +1,9 @@
 import { MdTv } from "react-icons/md";
-import { FaDownload, FaChild } from "react-icons/fa";
+import { FaDownload,} from "react-icons/fa";
+import {FaChild } from "react-icons/fa";
 import { TbDeviceDesktop } from "react-icons/tb";
 
-const reasons = () => {
+const Reasons = () => {
   return (
   
     <section className="relative z-10 w-full text-white text-start py-12 px-4 md:px-8 lg:px-16 bg-black">
@@ -76,4 +77,4 @@ const reasons = () => {
   );
 };
 
-export default reasons;
+export default Reasons;
