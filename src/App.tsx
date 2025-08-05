@@ -4,7 +4,7 @@ import SignIn from "./Componets/SignIn page/SignIn";
 import Hero from "./Componets/HeroSection/Hero";
 import Footer from "./Componets/Footer/Footer";
 import FQA from "./Componets/HeroSection/FQA";
-import Reasons from "./Componets/HeroSection/reasons";
+import Reason from "./Componets/HeroSection/Reason";
 import SignUp from "./Componets/SignIn page/SignUp";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/hero" element={<Hero />} />
       </Routes>
       <Hero />
-      <Reasons />
+      <Reason />
       <FQA />
       <Footer />
     </Router>
