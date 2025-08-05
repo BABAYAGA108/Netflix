@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Componets/Navbar/Navbar";
-import SignIn from "./Componets/SignIn page/SignIn"
+import SignIn from "./Componets/SignIn page/SignIn";
 import Hero from "./Componets/HeroSection/Hero";
 import Footer from "./Componets/Footer/Footer";
 import FQA from "./Componets/HeroSection/FQA";
@@ -22,7 +22,6 @@ function App() {
     </Router>
   );
 }
-
 
 function Home() {
   return (
